@@ -1,3 +1,9 @@
 function addToPlayerList(input) {
-    console.log(input.parentNode.parentNode)
+    const playerName = input.parentNode.parentNode.childNodes[1].innerText
+
+    const playerList = {
+        noOne: playerName
+    }
+
+    console.log(playerList)
 }
