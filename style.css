@@ -18,7 +18,7 @@
     color: #B3B3B3;
 }
 
-#btn-submit {
+.btn-submit {
     width: 221px;
     height: 42px;
     left: 21px;
@@ -26,7 +26,11 @@
     background-color: #015196;
 }
 
-#total-player {
+#total-players {
     width: 264px;
-    height: 50px;
+    height: 371px;
+}
+
+body {
+    background-color: #151515;
 }

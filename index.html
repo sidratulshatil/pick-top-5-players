@@ -26,7 +26,7 @@
             </div>
         </section>
     </header>
-    <main class="mt-16 mx-auto w-11/12 gap-5 flex">
+    <main class="mt-16 mx-auto w-11/12 gap-5 flex ml-48">
         <section class="d-flex bg-secondary mx-5">
             <div class="grid grid-cols-3 gap-5">
                 <div class="col">
@@ -35,7 +35,8 @@
                         <div class="card-body">
                             <h5 class="card-title text-3xl font-semibold ">Lionel Messi</h5>
                             <h5 class="stat-text text-center text-xl mt-5">30 Goals . <span>80 Assist</span> </h5>
-                            <p class="card-text"><button id="btn-submit" class="ml-3 mt-2 ">Submit</button></p>
+                            <div class="card-text"><button class=" btn-submit ml-3 mt-2 "
+                                    onclick="addToPlayerList(this)">Submit</button></div>
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-3xl font-semibold ">Neymar JR</h5>
                             <h5 class="stat-text text-center text-xl mt-5">72 Goals . <span>50 Assist</span> </h5>
-                            <p class="card-text"><button id="btn-submit" class="ml-3 mt-2 ">Submit</button></p>
+                            <p class="card-text"><button class=" btn-submit ml-3 mt-2 ">Submit</button></p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +56,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-3xl font-semibold ">Kylian Mbappe</h5>
                             <h5 class="stat-text text-center text-xl mt-5">40 Goals . <span>20 Assist</span> </h5>
-                            <p class="card-text"><button id="btn-submit" class="ml-3 mt-2 ">Submit</button></p>
+                            <p class="card-text"><button class="btn-submit ml-3 mt-2 ">Submit</button></p>
                         </div>
                     </div>
                 </div>
@@ -65,7 +66,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-3xl font-semibold ">Vítor Machado</h5>
                             <h5 class="stat-text text-center text-xl mt-5">12 Goals . <span>25 Assist</span> </h5>
-                            <p class="card-text"><button id="btn-submit" class="ml-3 mt-2 ">Submit</button></p>
+                            <p class="card-text"><button class="btn-submit ml-3 mt-2 ">Submit</button></p>
                         </div>
                     </div>
                 </div>
@@ -75,25 +76,64 @@
                         <div class="card-body">
                             <h5 class="card-title text-3xl font-semibold ">Renato Sanches</h5>
                             <h5 class="stat-text text-center text-xl mt-5">8 Goals . <span>12 Assist</span> </h5>
-                            <p class="card-text"><button id="btn-submit" class="ml-3 mt-2 ">Submit</button></p>
+                            <p class="card-text">
+                                <button class="btn-submit ml-3 mt-2 ">Submit</button>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class=" col">
                     <div class="card bg-black">
                         <img src="images/player-6.png" class="" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-3xl font-semibold ">Sergio Ramos</h5>
-                            <h5 class="stat-text text-center text-xl mt-5">20 Goals . <span>9 Assist</span> </h5>
-                            <p class="card-text"><button id="btn-submit" class="ml-3 mt-2 ">Submit</button></p>
+                            <h5 class="stat-text text-center text-xl mt-5">20 Goals . <span>9
+                                    Assist</span> </h5>
+                            <p class="card-text"><button class="btn-submit ml-3 mt-2 ">Submit</button>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="text-white gap-5">
+            <div id="total-players" class="bg-black">
+                <h2 class="text-center text-2xl font-bold">Selected - V</h2>
+                <ul>
 
+                </ul>
+
+            </div>
+            <div class="bg-black mt-10">
+                <h2 class="text-center text-2xl font-bold">Budget</h2>
+                <div class="my-4 flex ml-6 ">
+                    <h2 class="text-slate-300">Per Player</h2><span>:</span>
+                    <input id="per-player-field" class="w-2/5 ml-3 text-black" type="number">
+                </div>
+                <p class="card-text"><button id="btn-calculate" class="btn-submit ml-3 mt-2 ">Calculate</button></p>
+                <div class="my-2 ml-6 ">
+                    <h2 class="text-slate-300 ">Player Expenses <span class="ml-6">$</span> <span
+                            id="player-expenses-field">0</span></h2>
+                </div>
+                <div class="my-4 flex ml-6 ">
+                    <h2 class="text-slate-300">Manager</h2><span>:</span>
+                    <input id="per-player-field" class="w-2/5 ml-4 text-black" type="number">
+                </div>
+                <div class="my-4 flex ml-6 ">
+                    <h2 class="text-slate-300">Coach</h2><span>:</span>
+                    <input id="per-player-field" class="w-2/5 ml-9 text-black" type="number">
+                </div>
+                <p class="card-text"><button id="btn-calculate-total" class="btn-submit ml-3 mt-2 ">Calculate
+                        Total</button></p>
+                <div class="my-2 ml-4 p-2">
+                    <h2 class="text-slate-300 ">Total <span class="ml-28 text-orange-500">$</span> <span
+                            class="text-orange-500 font-semibold" id="player-expenses-field">0</span></h2>
+                </div>
+            </div>
+        </section>
     </main>
-
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
