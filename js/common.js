@@ -10,3 +10,7 @@ function getElementByTextId(input) {
     const inputFieldValue = parseInt(inputFieldString)
     return inputFieldValue
 }
+function setTextOnTextField(input, value) {
+    const inputField = document.getElementById(input)
+    inputField.innerText = value
+}

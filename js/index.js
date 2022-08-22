@@ -33,6 +33,12 @@ function addToPlayerList(input) {
 }
 document.getElementById('btn-calculate').addEventListener('click', function () {
     const perPlayerField = getElementById('per-player-field')
-    const el = document.querySelectorAll("players-list")
-    console.log(el.length)
+    const playersList = document.getElementById("players-list")
+    const playersListLength = playersList.children.length
+
+    const playerExpensesField = getElementByTextId('player-expenses-field')
+
+    const playerExpensesTotal = perPlayerField * playersListLength
+
+    setTextOnTextField('player-expenses-field', playerExpensesTotal)
 })
