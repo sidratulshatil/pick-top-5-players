@@ -18,7 +18,9 @@ function playerListUpdate(playersName) {
             playersList.appendChild(li)
         }
         else {
+
             alert('You Cannot Add More Than 5 Players!!')
+            input.disabled = false
         }
     }
 }
@@ -34,7 +36,7 @@ function addToPlayerList(input) {
     playerListUpdate(playerList)
     input.disabled = true
     if (input.disabled = true) {
-        input.style.backgroundColor = '#46a8fe'
+        input.style.backgroundColor = '#A2A9AF'
     }
 }
 document.getElementById('btn-calculate').addEventListener('click', function () {
