@@ -24,13 +24,18 @@
     left: 21px;
     top: 308px;
     background-color: #015196;
+
 }
 
-#total-players {
+#select-v {
     width: 264px;
     height: 371px;
 }
 
 body {
     background-color: #151515;
+}
+
+#players-list {
+    list-style: list;
 }

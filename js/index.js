@@ -1,9 +1,38 @@
-function addToPlayerList(input) {
-    const playerName = input.parentNode.parentNode.childNodes[1].innerText
+const playerList = []
 
-    const playerList = {
-        noOne: playerName
+
+function playerListUpdate(playersName) {
+
+
+    const playersList = document.getElementById("players-list")
+    playersList.innerText = "";
+    for (let i = 0; i < playersName.length; i++) {
+        // console.log(playerList[i].name)
+        const name = playerList[i].name
+        const li = document.createElement("li")
+        li.innerText = name
+        playersList.appendChild(li)
     }
-
-    console.log(playerList)
 }
+
+
+function addToPlayerList(input) {
+    const playerName = input.parentNode.parentNode.children[0].innerText
+
+    const playerListObj = {
+        name: playerName
+
+    }
+    // console.log(playerListObj.name)
+    playerList.push(playerListObj)
+    playerListUpdate(playerList)
+    input.disabled = true
+    if (input.disabled = true) {
+        input.style.backgroundColor = '#46a8fe'
+    }
+}
+document.getElementById('btn-calculate').addEventListener('click', function () {
+    const perPlayerField = getElementById('per-player-field')
+    const el = document.querySelectorAll("players-list")
+    console.log(el.length)
+})
